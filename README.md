@@ -1,70 +1,41 @@
 # Cleaning Data in R
 
-### Course Description
-
+## Course Description
 It's commonly said that data scientists spend 80% of their time cleaning and manipulating data and only 20% of their time actually analyzing it.
 For this reason, it is critical to become familiar with the data cleaning process and all of the tools available to you along the way.
 This course provides a very basic introduction to cleaning data in R, so that you can get from raw data to awesome insights as quickly and painlessly as possible!
 
 #### 1. Introduction and exploring raw data
-
-This chapter will give you an overview of the process of data cleaning with R, then walk you through the basics of exploring raw data.
-
-#### 
+> This chapter will give you an overview of the process of data cleaning with R, then walk you through the basics of exploring raw data.
 
 #### 2. Tidying data 
-
-This chapter will give you an overview of the principles of tidy data, how to identify messy data, and what to do about it.
-
-#### 
+> This chapter will give you an overview of the principles of tidy data, how to identify messy data, and what to do about it.
 
 #### 3. Preparing data for analysis 
-
-This chapter will teach you how to prepare your data for analysis. We will look at type conversion, string manipulation, missing and special values, and outliers and obvious errors.
-
-#### 
+> This chapter will teach you how to prepare your data for analysis. We will look at type conversion, string manipulation, missing and special values, and outliers and obvious errors. 
 
 #### 4. Putting it all together 
+> In this chapter, you will practice everything you've learned from the first three chapters in order to clean a messy dataset using R.
 
-In this chapter, you will practice everything you've learned from the first three chapters in order to clean a messy dataset using R.
 
-**  
-**
-
-**The data cleaning process**
+## The data cleaning process
 
 Which of the following is NOT an essential part of the data cleaning
 process as outlined in the previous video?
 
 **Possible Answers**
-
 - Preparing data for analysis
-
 - Exploring raw data
-
 - Removing or replacing missing data
-
 - Tidying data
 
-Great work! No one likes missing data, but it is dangerous to assume
-that it can simply be removed or replaced. Sometimes missing data tells
-us something important about whatever it is that we're measuring (i.e.
-The value of the variable that is missing may be related to the reason
-it is missing). Such data is called Missing not at Random, or MNAR.
+Great work! No one likes missing data, but it is dangerous to assume that it can simply be removed or replaced. Sometimes missing data tells us something important about whatever it is that we're measuring (i.e. The value of the variable that is missing may be related to the reason it is missing). Such data is called Missing not at Random, or MNAR.
 
 # Here's what messy data look like
-
-In the final chapter of this course, you will be presented with a messy,
-real-world dataset containing an entire year's worth of weather data
-from Boston, USA. Among other things, you'll be presented with variables
-that contain column names, column names that should be values, numbers
-coded as character strings, and values that are missing, extreme, and
-downright erroneous!
+In the final chapter of this course, you will be presented with a messy, real-world dataset containing an entire year's worth of weather data from Boston, USA. Among other things, you'll be presented with variables that contain column names, column names that should be values, numbers coded as character strings, and values that are missing, extreme, and downright erroneous!
 
 ## Instructions
-
-We've placed some R code in the script to the right. Run the code as-is
-to see just how messy the weather data really are!
+We've placed some R code in the script to the right. Run the code as-is to see just how messy the weather data really are!
 
 \# View the first 6 rows of data
 
