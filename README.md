@@ -51,7 +51,7 @@ tail(weather)
 str(weather)
 ```
 
----
+### Code
 
 ```{r}
 head(weather)
@@ -161,26 +161,21 @@ In this course, you will acquire many new tools in your data cleaning toolbox fo
 Run the code provided to see what the weather dataset will look like by the time you are done cleaning it. If it's not immediately clear what's changed, don't worry! You will have a much deeper understanding by the end of this course.
 
 \# View the first 6 rows of data
-
 ```{r}
 head(weather_clean)
 ```
 
 \# View the last 6 rows of data
-
 ```{r}
 tail(weather_clean)
 ```
 
 \# View a condensed summary of the data
-
 ```{r}
 str(weather_clean)
 ```
 
-\> \# View the first 6 rows of data
-
----
+### Code
 
 ```{r}
 head(weather_clean)
@@ -327,38 +322,23 @@ str(weather_clean)
 \$ min_sea_level_pressure_in : num 30 30.4 29.9 30.1 30.4 ...
 \$ min_temperature_f : num 39 33 37 30 26 38 21 18 29 38 ...
 \$ min_visibility_miles : num 10 2 1 10 5 0 5 2 1 1 ...
-\$ precipitation_in : num 0.01 0.1 0.44 0 0.11 1.09 0.13 0.03 2.9 0.28
-...
-
+\$ precipitation_in : num 0.01 0.1 0.44 0 0.11 1.09 0.13 0.03 2.9 0.28 ...
 \$ wind_dir_degrees : num 268 62 254 292 61 313 350 354 38 357 ...
 ```
 
-Good work! Doesn't this dataset already look nicer than in the previous
-exercise?
+Good work! Doesn't this dataset already look nicer than in the previous exercise?
 
-# Getting a feel for your data
+## Getting a feel for your data
 
-The first thing to do when you get your hands on a new dataset is to
-understand its structure. There are several ways to go about this in R,
-each of which may reveal different issues with your data that require
-attention.
+The first thing to do when you get your hands on a new dataset is to understand its structure. There are several ways to go about this in R, each of which may reveal different issues with your data that require attention.
 
-In this course, we are only concerned with data that can be expressed in
-table format (i.e. two dimensions, rows and columns). As you may recall
-from earlier courses, tables in R often have the type data.frame. You
-can check the class of any object in R with the class() function.
+In this course, we are only concerned with data that can be expressed in table format (i.e. two dimensions, rows and columns). As you may recall from earlier courses, tables in R often have the type data.frame. You can check the class of any object in R with the class() function.
 
-Once you know that you are dealing with tabular data, you may also want
-to get a quick feel for the contents of your data. Before printing the
-entire dataset to the console, it's probably worth knowing how many rows
-and columns there are. The dim() command tells you this.
+Once you know that you are dealing with tabular data, you may also want to get a quick feel for the contents of your data. Before printing the entire dataset to the console, it's probably worth knowing how many rows and columns there are. The dim() command tells you this.
 
-## Instructions
+### Instructions
 
-We've loaded a dataset called bmi into your workspace. The data, which
-give the (age standardized) mean body mass index (BMI) among males in
-each country for the years 1980-2008, come from the [School of Public Health, Imperial College London (https://www1.imperial.ac.uk/publichealth/departments/ebs/projects/eresh/majidezzati/healthmetrics/metabolicriskfactors/)].
-
+We've loaded a dataset called bmi into your workspace. The data, which give the (age standardized) mean body mass index (BMI) among males in each country for the years 1980-2008, come from the [School of Public Health, Imperial College London (https://www1.imperial.ac.uk/publichealth/departments/ebs/projects/eresh/majidezzati/healthmetrics/metabolicriskfactors/)].
 - Check the class of bmi
 - Find the dimensions of bmi
 - Print the bmi column names
@@ -378,7 +358,7 @@ dim(bmi)
 names(bmi)
 ```
 
----
+### Code
 
 ```{r}
 class(bmi)
@@ -408,34 +388,17 @@ names(bmi)
 \[29\] "Y2007" "Y2008"
 ```
 
-Nice job! We'll be working with the BMI data for the remainder of this
-chapter, so it's good you're familiar with it now.
+Nice job! We'll be working with the BMI data for the remainder of this chapter, so it's good you're familiar with it now.
 
-# Viewing the structure of your data
+## Viewing the structure of your data
 
-Since bmi doesn't have a huge number of columns, you can view a quick
-snapshot of your data using the str() (for *structure*) command. In
-addition to the class and dimensions of your *entire
-dataset*, str() will tell you the class of *each variable* and give you
-a preview of its contents.
+Since bmi doesn't have a huge number of columns, you can view a quick snapshot of your data using the str() (for *structure*) command. In addition to the class and dimensions of your *entire dataset*, str() will tell you the class of *each variable* and give you a preview of its contents.
 
-Although we won't go into detail on the dplyr package in this lesson
-(see the [Data Manipulation in R with
-dplyr](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) course),
-the glimpse() function from dplyr is a slightly cleaner alternative
-to str(). str() and glimpse() give you a preview of your data, which may
-reveal issues with the way columns are labelled, how variables are
-encoded, etc.
+Although we won't go into detail on the dplyr package in this lesson (see the [Data Manipulation in R with dplyr](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) course), the glimpse() function from dplyr is a slightly cleaner alternative to str(). str() and glimpse() give you a preview of your data, which may reveal issues with the way columns are labelled, how variables are encoded, etc.
 
-You can use the summary() command to get a better feel for how your data
-are distributed, which may reveal unusual or extreme values, unexpected
-missing data, etc. For numeric variables, this means looking at means,
-quartiles (including the median), and extreme values. For character or
-factor variables, you may be curious about the number of times each
-value appears in the data (i.e. counts), which summary() also reveals.
+You can use the summary() command to get a better feel for how your data are distributed, which may reveal unusual or extreme values, unexpected missing data, etc. For numeric variables, this means looking at means, quartiles (including the median), and extreme values. For character or factor variables, you may be curious about the number of times each value appears in the data (i.e. counts), which summary() also reveals.
 
-## Instructions
-
+### Instructions
 - View the structure of bmi using the traditional method
 - Load the dplyr package
 - View the structure of bmi using dplyr
@@ -461,7 +424,7 @@ glimpse(bmi)
 summary(bmi)
 ```
 
----
+### Code
 
 ```
 str(bmi)
@@ -501,10 +464,7 @@ str(bmi)
 \$ Y2008 : num 20.6 26.4 24.6 27.6 22.3 ...
 ```
 
-
-\> \# Load dplyr
-
-```{r}
+```{R}
 library(dplyr)
 ```
 
@@ -623,55 +583,30 @@ Median :25.36 Median :25.50
 Mean :24.99 Mean :25.10
 3rd Qu.:26.66 3rd Qu.:26.82
 Max. :33.69 Max. :33.90
-
 ```
 
-Nice job! Take a moment to notice the slight differences in the output
-generated by str() and glimpse()
+---
 
-[  
-DataCamp](https://www.datacamp.com/)
+Nice job! Take a moment to notice the slight differences in the output generated by str() and glimpse()
 
-[Course
-Outline](https://campus.datacamp.com/courses/cleaning-data-in-r/chapter-1-introduction-and-exploring-raw-data?ex=9)
+## Looking at your data
+You can look at all the summaries you want, but at the end of the day, there is no substitute for looking at your data -- either in raw table form or by plotting it.
 
-# Looking at your data
+The most basic way to look at your data in R is by printing it to the console. As you may know from experience, the print() command is not even necessary; you can just type the name of the object. The downside to this option is that R will attempt to print the entire dataset, which can be a nuisance if the dataset is too large.
 
-100xp
+One way around this is to use the head() and tail() commands, which only display the first and last 6 rows of data, respectively. You can view more (or fewer) rows by providing as a second argument to the function the number of rows you wish to view. These functions provide a useful method for quickly getting a sense of your data without overly cluttering the console.
 
-You can look at all the summaries you want, but at the end of the day,
-there is no substitute for looking at your data -- either in raw table
-form or by plotting it.
-
-The most basic way to look at your data in R is by printing it to the
-console. As you may know from experience, the print() command is not
-even necessary; you can just type the name of the object. The downside
-to this option is that R will attempt to print the entire dataset, which
-can be a nuisance if the dataset is too large.
-
-One way around this is to use the head() and tail() commands, which only
-display the first and last 6 rows of data, respectively. You can view
-more (or fewer) rows by providing as a second argument to the function
-the number of rows you wish to view. These functions provide a useful
-method for quickly getting a sense of your data without overly
-cluttering the console.
-
-## Instructions
-
-- Print the full dataset to the console (you don't need print()to do
-  this)
-
+### Instructions
+- Print the full dataset to the console (you don't need print()to do this)
 - View the first 6 rows of bmi
-
 - View the first 15 rows of bmi
-
 - View the last 6 rows of bmi
-
 - View the last 10 rows of bmi
 
 \# Print bmi to the console
-
+```{R}
 print(bmi)
+```
 
 \# View the first 6 rows
 
@@ -3744,7 +3679,7 @@ two-dimensional plane.
 
 Let's look at a quick example of each.
 
-## Instructions
+### Instructions
 
 For the bmi dataset:
 
@@ -3855,7 +3790,7 @@ gather(wide_df, my_key, my_val, -col)
 
 Experiment with this in the console before attempting the exercise.
 
-## Instructions
+### Instructions
 
 - Apply the gather() function to bmi, saving the result to bmi_long.
   This will create two new columns:
@@ -3949,7 +3884,7 @@ spread(long_df, my_key, my_val)
 
 Experiment with this in the console before attempting the exercise.
 
-## Instructions
+### Instructions
 
 - Use spread() to reverse the operation that you performed in the last
   exercise with gather(). In other words, make bmi_long wide again,
@@ -4103,7 +4038,7 @@ separate(treatments, year_mo, c("year", "month"))
 
 Experiment with this in the console before attempting the exercise.
 
-## Instructions
+### Instructions
 
 We've loaded a dataset called bmi_cc into your workspace that is a
 slight variation of bmi_long, which you've already seen.
@@ -4194,7 +4129,7 @@ unite(treatments, year_mo, year, month)
 
 Experiment with this in the console before attempting the exercise.
 
-## Instructions
+### Instructions
 
 In the last exercise, you separated the Country_ISO column of
 the bmi_cc dataset into two columns (Country and ISO) and saved the
@@ -4259,7 +4194,7 @@ where measurements are taken on subjects of interest on multiple
 occasions over time. The gather() function is helpful in these
 situations.
 
-## Instructions
+### Instructions
 
 - View the head of census.
 
@@ -4460,7 +4395,7 @@ which to fill in the newly spread out columns (num).
 Now let's try this on a new messy dataset census_long. What information
 does this tell us?
 
-## Instructions
+### Instructions
 
 - View the first 50 rows of census_long
 
@@ -4665,7 +4600,7 @@ result. Keep in mind that the into argument, which specifies the names
 of the 2 new columns being formed, must be given as a character vector
 (e.g. c("column1", "column2")).
 
-## Instructions
+### Instructions
 
 - View the head of census_long3
 
@@ -4755,7 +4690,7 @@ you're working with. (There are subtle differences between
 the class, type, and mode of an object, but these distinctions are
 beyond the scope of this course.)
 
-## Instructions
+### Instructions
 
 Change the object within each call of the class() function to make it
 evaluate to the following (in order):
@@ -4853,7 +4788,7 @@ There are a few less intuitive results. For example, under the hood, the
 logical values TRUE and FALSE are coded as 1 and 0, respectively.
 Therefore, as.logical(1) returns TRUE and as.numeric(TRUE)returns 1.
 
-## Instructions
+### Instructions
 
 We've loaded a dataset called students into your workspace. These data
 provide information on 395 students including their grades in three
@@ -5082,7 +5017,7 @@ read in, although not all combinations are valid. Notice that the
 functions are "smart" in that they are capable of parsing multiple
 formats.
 
-## Instructions
+### Instructions
 
 We have loaded a dataset called students2 into your
 workspace. students2 is similar to students, except now instead of an
@@ -5411,7 +5346,7 @@ numeric and in that case, leading zeros would be unnecessary.)
 
 \[1\] "0024493"
 
-## Instructions
+### Instructions
 
 - Load the stringr package
 
@@ -5473,7 +5408,7 @@ very straightforward in (base) R thanks to toupper() and tolower(). Each
 function takes exactly one argument: the character string (or
 vector/column of strings) to be converted to the desired case.
 
-## Instructions
+### Instructions
 
 There's a vector of state abbreviations called states in your workspace,
 but there's a problem...it's all lowercase. It's more common for state
@@ -5551,7 +5486,7 @@ the case of str_replace(), this is the pattern we want to replace.
 Finally, str_replace() has a third argument, which is the string to
 replace with.
 
-## Instructions
+### Instructions
 
 The students2 dataset from earlier in the chapter has been loaded for
 you again.
@@ -5877,7 +5812,7 @@ has 3 pieces of information for each of four friends: - Name - Number of
 friends on a popular social media platform - Current "status" on the
 platform
 
-## Instructions
+### Instructions
 
 - Call is.na() on social_df to spot all NA values.
 
@@ -5983,7 +5918,7 @@ are missing (although coded in two different ways). Alice is on the
 platform, but is a passive user and never sets her status, hence the
 reason it's missing for her.
 
-## Instructions
+### Instructions
 
 - Replace all empty strings (i.e. "") with NA in the statuscolumn
   of social_df.
@@ -6108,7 +6043,7 @@ We have loaded a dataset called students3, which is another slight
 variation of the original students dataset. Two variables appear to have
 suspicious values: age and absences. Let's explore these values further.
 
-## Instructions
+### Instructions
 
 - Call summary() on the full students3 dataset to expose the concerning
   values of age and absences.
@@ -6285,7 +6220,7 @@ In this situation, we are concerned about three things:
     direction, with a maximum value of 75 (which is over 18 times the
     median value of 4)
 
-## Instructions
+### Instructions
 
 - View a boxplot() of the age variable from students3
 
@@ -6329,7 +6264,7 @@ the class() of the data object to make sure it's what we expect
 (generally a data.frame) in addition to checking its dimensions
 with dim() and the column names with names().
 
-## Instructions
+### Instructions
 
 For the weather dataset, which is loaded in your workspace:
 
@@ -6390,7 +6325,7 @@ names(weather)
 Next up is to look at some summaries of the data. This is where
 functions like str(), glimpse() from dplyr, and summary() come in handy.
 
-## Instructions
+### Instructions
 
 - View the structure of weather using base R
 
@@ -6723,7 +6658,7 @@ functions head()and tail() allow you to view the top and bottom rows of
 the data, respectively. Recall you'll be shown 6 rows by default, but
 you can alter this behavior with a second argument to the function.
 
-## Instructions
+### Instructions
 
 For the weather data:
 
@@ -7100,7 +7035,7 @@ gather(df, time, val, t1:t3)
 Notice that gather() allows you to select multiple columns to be
 gathered by using the : operator.
 
-## Instructions
+### Instructions
 
 - Load the tidyr package
 
@@ -7174,7 +7109,7 @@ spread(df2, time, val)
 
 Note how the values of the time column now become column names.
 
-## Instructions
+### Instructions
 
 - Using the code provided, remove the first column of weather2
 
@@ -7373,7 +7308,7 @@ month, and day columns and recoding the resulting character column as a
 date. We can use a combination of base R, stringr, and lubridate to
 accomplish this task.
 
-## Instructions
+### Instructions
 
 - Load the stringr and lubridate packages
 
@@ -7571,7 +7506,7 @@ saying that R introduced an NA in the process of coercing to numeric.
 This is because it doesn't know how to make a number out of a string
 ("some string"). Watch out for this in our weather data!
 
-## Instructions
+### Instructions
 
 - Use str() to see how variables are stored in weather5
 
@@ -8058,7 +7993,7 @@ the PrecipitationIn column. In order to coerce this column to numeric,
 you'll need to deal with this somehow. To keep things simple, we will
 just replace "T" with the number zero.
 
-## Instructions
+### Instructions
 
 - Use str_replace() from stringr to make the proper replacements in
   the PrecipitationIn column of weather5
@@ -8178,7 +8113,7 @@ The summary() function may also come in handy for identifying which
 variables contain the missing values. Finally, the which() function is
 useful for locating the missing values within a particular column.
 
-## Instructions
+### Instructions
 
 - Use sum() and is.na() to count the number of NAvalues in weather6
 
@@ -8438,7 +8373,7 @@ intelligent and informed way. Sometimes the best way forward is obvious
 and other times it may require some research and/or discussions with the
 original collectors of the data.
 
-## Instructions
+### Instructions
 
 - View a summary() of weather6
 
@@ -8631,7 +8566,7 @@ appears that there's another. Sometimes you get lucky and can infer the
 correct or intended value from the other data. For example, if you know
 the minimum and maximum values of a particular metric on a given day...
 
-## Instructions
+### Instructions
 
 - Use summary() to look at the value
   of *only* the Mean.VisibilityMiles variable of weather6
@@ -8809,16 +8744,14 @@ replacement length
 
 Well done! Your data are looking tidy. Just a quick sanity check left!
 
-# Check other extreme values
-
-100xp
+## Check other extreme values
 
 In addition to dealing with obvious errors in the data, we want to see
 if there are other extreme values. In addition to the
 trusty summary() function, hist() is useful for quickly getting a feel
 for how different variables are distributed.
 
-## Instructions
+### Instructions
 
 - Check a summary() of weather6 one more time for extreme or unexpected
   values
@@ -8987,7 +8920,7 @@ There are a number of stylistic conventions in the R language. Depending on who 
 Finally, the events column (renamed to be all lowercase in the first instruction) contains an empty string ("") for any day on which there was no significant weather event such as rain, fog, a thunderstorm, etc.
 However, if it's the first time you're seeing these data, it may not be obvious that this is the case, so it's best for us to be explicit and replace the empty strings with something more meaningful.
 
-## Instructions
+### Instructions
 
 - We've created a vector of column names in your workspace called new_colnames, all of which obey the conventions described above. Clean up the column names of weather6 by assigning new_colnames to names(weather6)
 - Replace all empty strings in the events column of weather6 with "None"
