@@ -137,8 +137,6 @@ X24 X25 X26 X27 X28 X29 X30 X31
 286 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
 ```
 
-\> \# View a condensed summary of the data
-
 ```{r}
 str(weather)
 ```
@@ -182,6 +180,8 @@ str(weather)
 \$ X31 : chr "30" "25" "20" "8" ...
 ```
 
+---
+
 Nicely done! You may have already noticed messy aspects of the dataset.
 If not, don't worry! We'll get to that soon.
 
@@ -199,266 +199,176 @@ end of this course.
 
 \# View the first 6 rows of data
 
+```{r}
 head(weather_clean)
+```
 
 \# View the last 6 rows of data
 
+```{r}
 tail(weather_clean)
+```
 
 \# View a condensed summary of the data
 
+```{r}
 str(weather_clean)
+```
 
 \> \# View the first 6 rows of data
 
-\> head(weather_clean)
+---
 
+```{r}
+head(weather_clean)
+```
+
+```
 date events cloud_cover max_dew_point_f max_gust_speed_mph
-
 1 2014-12-01 Rain 6 46 29
-
 2 2014-12-02 Rain-Snow 7 40 29
-
 3 2014-12-03 Rain 8 49 38
-
 4 2014-12-04 None 3 24 33
-
 5 2014-12-05 Rain 5 37 26
-
 6 2014-12-06 Rain 8 45 25
 
 max_humidity max_sea_level_pressure_in max_temperature_f
 max_visibility_miles
-
 1 74 30.45 64 10
-
 2 92 30.71 42 10
-
 3 100 30.40 51 10
-
 4 69 30.56 43 10
-
 5 85 30.68 42 10
-
 6 100 30.42 45 10
 
 max_wind_speed_mph mean_humidity mean_sea_level_pressure_in
-
 1 22 63 30.13
-
 2 24 72 30.59
-
 3 29 79 30.07
-
 4 25 54 30.33
-
 5 22 66 30.59
-
 6 22 93 30.24
 
-mean_temperature_f mean_visibility_miles mean_wind_speed_mph
-mean_dew_point_f
-
+mean_temperature_f mean_visibility_miles mean_wind_speed_mph mean_dew_point_f
 1 52 10 13 40
-
 2 38 8 15 27
-
 3 44 5 12 42
-
 4 37 10 12 21
-
 5 34 10 10 25
-
 6 42 4 8 40
 
 min_dew_point_f min_humidity min_sea_level_pressure_in min_temperature_f
-
 1 26 52 30.01 39
-
 2 17 51 30.40 33
-
 3 24 57 29.87 37
-
 4 13 39 30.09 30
-
 5 12 47 30.45 26
-
 6 36 85 30.16 38
 
 min_visibility_miles precipitation_in wind_dir_degrees
-
 1 10 0.01 268
-
 2 2 0.10 62
-
 3 1 0.44 254
-
 4 10 0.00 292
-
 5 5 0.11 61
-
 6 0 1.09 313
+```
 
-\>
+```{r}
+tail(weather_clean)
+```
 
-\> \# View the last 6 rows of data
-
-\> tail(weather_clean)
-
+```{r}
 date events cloud_cover max_dew_point_f max_gust_speed_mph
-
 361 2015-11-26 None 6 49 28
-
 362 2015-11-27 None 7 52 32
-
 363 2015-11-28 Rain 8 50 23
-
 364 2015-11-29 None 4 33 20
-
 365 2015-11-30 None 6 26 17
-
 366 2015-12-01 Rain 7 43 17
 
 max_humidity max_sea_level_pressure_in max_temperature_f
-
 361 100 30.87 59
-
 362 100 30.63 64
-
 363 93 30.20 60
-
 364 79 30.42 44
-
 365 75 30.53 38
-
 366 96 30.40 45
 
 max_visibility_miles max_wind_speed_mph mean_humidity
-
 361 10 22 79
-
 362 10 26 78
-
 363 10 18 80
-
 364 10 16 58
-
 365 10 14 65
-
 366 10 15 83
 
 mean_sea_level_pressure_in mean_temperature_f mean_visibility_miles
-
 361 30.77 49 9
-
 362 30.41 56 9
-
 363 30.16 51 9
-
 364 30.26 38 10
-
 365 30.46 33 10
-
 366 30.24 39 8
 
 mean_wind_speed_mph mean_dew_point_f min_dew_point_f min_humidity
-
 361 10 42 34 57
-
 362 14 49 47 56
-
 363 10 43 36 67
-
 364 10 23 15 36
-
 365 9 23 18 54
-
 366 6 35 25 69
 
 min_sea_level_pressure_in min_temperature_f min_visibility_miles
-
 361 30.64 38 5
-
 362 30.15 48 5
-
 363 30.11 41 4
-
 364 30.19 32 10
-
 365 30.39 28 10
-
 366 30.01 32 1
 
 precipitation_in wind_dir_degrees
 
 361 0.00 180
-
 362 0.00 209
-
 363 0.21 358
-
 364 0.00 326
-
 365 0.00 65
-
 366 0.14 109
+```
 
-\>
+```{r}
+str(weather_clean)
+```
 
-\> \# View a condensed summary of the data
-
-\> str(weather_clean)
-
+```{r}
 'data.frame': 366 obs. of 23 variables:
-
 \$ date : POSIXct, format: "2014-12-01" "2014-12-02" ...
-
 \$ events : chr "Rain" "Rain-Snow" "Rain" "None" ...
-
 \$ cloud_cover : num 6 7 8 3 5 8 6 8 8 8 ...
-
 \$ max_dew_point_f : num 46 40 49 24 37 45 36 28 49 45 ...
-
 \$ max_gust_speed_mph : num 29 29 38 33 26 25 32 28 52 29 ...
-
 \$ max_humidity : num 74 92 100 69 85 100 92 92 100 100 ...
-
 \$ max_sea_level_pressure_in : num 30.4 30.7 30.4 30.6 30.7 ...
-
 \$ max_temperature_f : num 64 42 51 43 42 45 38 29 49 48 ...
-
 \$ max_visibility_miles : num 10 10 10 10 10 10 10 10 10 10 ...
-
 \$ max_wind_speed_mph : num 22 24 29 25 22 22 25 21 38 23 ...
-
 \$ mean_humidity : num 63 72 79 54 66 93 61 70 93 95 ...
-
 \$ mean_sea_level_pressure_in: num 30.1 30.6 30.1 30.3 30.6 ...
-
 \$ mean_temperature_f : num 52 38 44 37 34 42 30 24 39 43 ...
-
 \$ mean_visibility_miles : num 10 8 5 10 10 4 10 8 2 3 ...
-
 \$ mean_wind_speed_mph : num 13 15 12 12 10 8 15 13 20 13 ...
-
 \$ mean_dew_point_f : num 40 27 42 21 25 40 20 16 41 39 ...
-
 \$ min_dew_point_f : num 26 17 24 13 12 36 -3 3 28 37 ...
-
 \$ min_humidity : num 52 51 57 39 47 85 29 47 86 89 ...
-
 \$ min_sea_level_pressure_in : num 30 30.4 29.9 30.1 30.4 ...
-
 \$ min_temperature_f : num 39 33 37 30 26 38 21 18 29 38 ...
-
 \$ min_visibility_miles : num 10 2 1 10 5 0 5 2 1 1 ...
-
 \$ precipitation_in : num 0.01 0.1 0.44 0 0.11 1.09 0.13 0.03 2.9 0.28
 ...
 
 \$ wind_dir_degrees : num 268 62 254 292 61 313 350 354 38 357 ...
-
-\>
+```
 
 Good work! Doesn't this dataset already look nicer than in the previous
 exercise?
