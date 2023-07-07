@@ -84,8 +84,6 @@ tail(weather)
 str(weather)
 ```
 
-\> \# View the first 6 rows of data
-
 ```{r}
 head(weather)
 ```
@@ -107,153 +105,85 @@ X15 X16 X17 X18 X19 X20 X21 X22 X23 X24 X25 X26 X27 X28 X29 X30 X31
 5 29 36 41 30 22 24 27 34 42 44 43 29 31 35 20 4 5
 6 27 30 32 26 20 20 25 25 37 41 29 28 29 27 10 -6 1
 ```
-\>
 
-\> \# View the last 6 rows of data
+```{r}
+tail(weather)
+```
 
-\> tail(weather)
-
+```
 X year month measure X1 X2 X3 X4 X5 X6 X7 X8
-
-281 281 2015 12 Mean.Wind.SpeedMPH 6 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\>
-
-282 282 2015 12 Max.Gust.SpeedMPH 17 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\>
-
-283 283 2015 12 PrecipitationIn 0.14 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\>
-
-284 284 2015 12 CloudCover 7 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\>
-
-285 285 2015 12 Events Rain \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\>
-
-286 286 2015 12 WindDirDegrees 109 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\>
-
+281 281 2015 12 Mean.Wind.SpeedMPH 6 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\>
+282 282 2015 12 Max.Gust.SpeedMPH 17 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\>
+283 283 2015 12 PrecipitationIn 0.14 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\>
+284 284 2015 12 CloudCover 7 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\>
+285 285 2015 12 Events Rain \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\>
+286 286 2015 12 WindDirDegrees 109 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\>
 X9 X10 X11 X12 X13 X14 X15 X16 X17 X18 X19 X20 X21 X22 X23
-
-281 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-282 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-283 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-284 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-285 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-286 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+281 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+282 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+283 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+284 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+285 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
+286 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>\<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
 
 X24 X25 X26 X27 X28 X29 X30 X31
-
 281 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
 282 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
 283 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
 284 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
 285 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
 286 \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\> \<NA\>
-
-\>
+```
 
 \> \# View a condensed summary of the data
 
-\> str(weather)
+```{r}
+str(weather)
+```
 
+```{r}
 'data.frame': 286 obs. of 35 variables:
-
 \$ X : int 1 2 3 4 5 6 7 8 9 10 ...
-
 \$ year : int 2014 2014 2014 2014 2014 2014 2014 2014 2014 2014 ...
-
 \$ month : int 12 12 12 12 12 12 12 12 12 12 ...
-
-\$ measure: chr "Max.TemperatureF" "Mean.TemperatureF"
-"Min.TemperatureF" "Max.Dew.PointF" ...
-
+\$ measure: chr "Max.TemperatureF" "Mean.TemperatureF" "Min.TemperatureF" "Max.Dew.PointF" ...
 \$ X1 : chr "64" "52" "39" "46" ...
-
 \$ X2 : chr "42" "38" "33" "40" ...
-
 \$ X3 : chr "51" "44" "37" "49" ...
-
 \$ X4 : chr "43" "37" "30" "24" ...
-
 \$ X5 : chr "42" "34" "26" "37" ...
-
 \$ X6 : chr "45" "42" "38" "45" ...
-
 \$ X7 : chr "38" "30" "21" "36" ...
-
 \$ X8 : chr "29" "24" "18" "28" ...
-
 \$ X9 : chr "49" "39" "29" "49" ...
-
 \$ X10 : chr "48" "43" "38" "45" ...
-
 \$ X11 : chr "39" "36" "32" "37" ...
-
 \$ X12 : chr "39" "35" "31" "28" ...
-
 \$ X13 : chr "42" "37" "32" "28" ...
-
 \$ X14 : chr "45" "39" "33" "29" ...
-
 \$ X15 : chr "42" "37" "32" "33" ...
-
 \$ X16 : chr "44" "40" "35" "42" ...
-
 \$ X17 : chr "49" "45" "41" "46" ...
-
 \$ X18 : chr "44" "40" "36" "34" ...
-
 \$ X19 : chr "37" "33" "29" "25" ...
-
 \$ X20 : chr "36" "32" "27" "30" ...
-
 \$ X21 : chr "36" "33" "30" "30" ...
-
 \$ X22 : chr "44" "39" "33" "39" ...
-
 \$ X23 : chr "47" "45" "42" "45" ...
-
 \$ X24 : chr "46" "44" "41" "46" ...
-
 \$ X25 : chr "59" "52" "44" "58" ...
-
 \$ X26 : chr "50" "44" "37" "31" ...
-
 \$ X27 : chr "52" "45" "38" "34" ...
-
 \$ X28 : chr "52" "46" "40" "42" ...
-
 \$ X29 : chr "41" "36" "30" "26" ...
-
 \$ X30 : chr "30" "26" "22" "10" ...
-
 \$ X31 : chr "30" "25" "20" "8" ...
-
-\>
+```
 
 Nicely done! You may have already noticed messy aspects of the dataset.
 If not, don't worry! We'll get to that soon.
 
 # Here's what clean data look like
-
-100xp
 
 In this course, you will acquire many new tools in your data cleaning
 toolbox for whipping the weather data into shape!
