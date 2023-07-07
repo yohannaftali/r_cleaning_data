@@ -22,7 +22,6 @@ This course provides a very basic introduction to cleaning data in R, so that yo
 
 Which of the following is NOT an essential part of the data cleaning
 process as outlined in the previous video?
-
 **Possible Answers**
 - Preparing data for analysis
 - Exploring raw data
@@ -31,26 +30,23 @@ process as outlined in the previous video?
 
 Great work! No one likes missing data, but it is dangerous to assume that it can simply be removed or replaced. Sometimes missing data tells us something important about whatever it is that we're measuring (i.e. The value of the variable that is missing may be related to the reason it is missing). Such data is called Missing not at Random, or MNAR.
 
-# Here's what messy data look like
+## Here's what messy data look like
 In the final chapter of this course, you will be presented with a messy, real-world dataset containing an entire year's worth of weather data from Boston, USA. Among other things, you'll be presented with variables that contain column names, column names that should be values, numbers coded as character strings, and values that are missing, extreme, and downright erroneous!
 
-## Instructions
+### Instructions
 We've placed some R code in the script to the right. Run the code as-is to see just how messy the weather data really are!
 
 \# View the first 6 rows of data
-
 ```{r}
 head(weather)
 ```
 
 \# View the last 6 rows of data
-
 ```{r}
 tail(weather)
 ```
 
 \# View a condensed summary of the data
-
 ```{r}
 str(weather)
 ```
@@ -156,11 +152,11 @@ str(weather)
 Nicely done! You may have already noticed messy aspects of the dataset.
 If not, don't worry! We'll get to that soon.
 
-# Here's what clean data look like
+## Here's what clean data look like
 
 In this course, you will acquire many new tools in your data cleaning toolbox for whipping the weather data into shape!
 
-## Instructions
+### Instructions
 
 Run the code provided to see what the weather dataset will look like by the time you are done cleaning it. If it's not immediately clear what's changed, don't worry! You will have a much deeper understanding by the end of this course.
 
