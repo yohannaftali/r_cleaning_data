@@ -1,63 +1,50 @@
 # Cleaning Data in R
 
-<img src="media/image1.png" style="width:1.43125in;height:1.43125in" />
-
 ### Course Description
 
-It's commonly said that data scientists spend 80% of their time cleaning
-and manipulating data and only 20% of their time actually analyzing it.
-For this reason, it is critical to become familiar with the data
-cleaning process and all of the tools available to you along the way.
-This course provides a very basic introduction to cleaning data in R, so
-that you can get from raw data to awesome insights as quickly and
-painlessly as possible!
+It's commonly said that data scientists spend 80% of their time cleaning and manipulating data and only 20% of their time actually analyzing it.
+For this reason, it is critical to become familiar with the data cleaning process and all of the tools available to you along the way.
+This course provides a very basic introduction to cleaning data in R, so that you can get from raw data to awesome insights as quickly and painlessly as possible!
 
 #### 1Introduction and exploring raw data
 
-This chapter will give you an overview of the process of data cleaning
-with R, then walk you through the basics of exploring raw data.
+This chapter will give you an overview of the process of data cleaning with R, then walk you through the basics of exploring raw data.
 
 #### 
 
 #### 2Tidying data 
 
-This chapter will give you an overview of the principles of tidy data,
-how to identify messy data, and what to do about it.
+This chapter will give you an overview of the principles of tidy data, how to identify messy data, and what to do about it.
 
 #### 
 
 #### 3Preparing data for analysis 
 
-This chapter will teach you how to prepare your data for analysis. We
-will look at type conversion, string manipulation, missing and special
-values, and outliers and obvious errors.
+This chapter will teach you how to prepare your data for analysis. We will look at type conversion, string manipulation, missing and special values, and outliers and obvious errors.
 
 #### 
 
 #### 4Putting it all together 
 
-In this chapter, you will practice everything you've learned from the
-first three chapters in order to clean a messy dataset using R.
+In this chapter, you will practice everything you've learned from the first three chapters in order to clean a messy dataset using R.
 
 **  
 **
 
 **The data cleaning process**
 
-50xp
-
 Which of the following is NOT an essential part of the data cleaning
 process as outlined in the previous video?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)Preparing data for analysis
+- Preparing data for analysis
 
-- ![](media/image2.wmf)Exploring raw data
+- Exploring raw data
 
-- ![](media/image2.wmf)Removing or replacing missing data
+- Removing or replacing missing data
 
-- ![](media/image2.wmf)Tidying data
+- Tidying data
 
 Great work! No one likes missing data, but it is dangerous to assume
 that it can simply be removed or replaced. Sometimes missing data tells
@@ -66,8 +53,6 @@ The value of the variable that is missing may be related to the reason
 it is missing). Such data is called Missing not at Random, or MNAR.
 
 # Here's what messy data look like
-
-100xp
 
 In the final chapter of this course, you will be presented with a messy,
 real-world dataset containing an entire year's worth of weather data
@@ -89,44 +74,39 @@ head(weather)
 
 \# View the last 6 rows of data
 
+```{r}
 tail(weather)
+```
 
 \# View a condensed summary of the data
 
+```{r}
 str(weather)
+```
 
 \> \# View the first 6 rows of data
 
-\> head(weather)
+```{r}
+head(weather)
+```
 
+```{r}
 X year month measure X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 X14
-
 1 1 2014 12 Max.TemperatureF 64 42 51 43 42 45 38 29 49 48 39 39 42 45
-
 2 2 2014 12 Mean.TemperatureF 52 38 44 37 34 42 30 24 39 43 36 35 37 39
-
 3 3 2014 12 Min.TemperatureF 39 33 37 30 26 38 21 18 29 38 32 31 32 33
-
 4 4 2014 12 Max.Dew.PointF 46 40 49 24 37 45 36 28 49 45 37 28 28 29
-
 5 5 2014 12 MeanDew.PointF 40 27 42 21 25 40 20 16 41 39 31 27 26 27
-
 6 6 2014 12 Min.DewpointF 26 17 24 13 12 36 -3 3 28 37 27 25 24 25
 
 X15 X16 X17 X18 X19 X20 X21 X22 X23 X24 X25 X26 X27 X28 X29 X30 X31
-
 1 42 44 49 44 37 36 36 44 47 46 59 50 52 52 41 30 30
-
 2 37 40 45 40 33 32 33 39 45 44 52 44 45 46 36 26 25
-
 3 32 35 41 36 29 27 30 33 42 41 44 37 38 40 30 22 20
-
 4 33 42 46 34 25 30 30 39 45 46 58 31 34 42 26 10 8
-
 5 29 36 41 30 22 24 27 34 42 44 43 29 31 35 20 4 5
-
 6 27 30 32 26 20 20 25 25 37 41 29 28 29 27 10 -6 1
-
+```
 \>
 
 \> \# View the last 6 rows of data
@@ -4137,16 +4117,16 @@ Which of the following is NOT a principle of tidy data?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)Each observation forms a row, each variable forms
+- Each observation forms a row, each variable forms
   a column, and each type of observational unit forms a table
 
-- ![](media/image2.wmf)A variable contains all values measured on the
+- A variable contains all values measured on the
   same unit across attributes
 
-- ![](media/image2.wmf)Each value belongs to a variable and an
+- Each value belongs to a variable and an
   observation
 
-- ![](media/image2.wmf)A dataset is a collection of values
+- A dataset is a collection of values
 
 That's correct!
 
@@ -4159,14 +4139,14 @@ following is NOT a symptom of messy data?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)Variables are stored in both rows and columns
+- Variables are stored in both rows and columns
 
-- ![](media/image2.wmf)Column headers are values, not variable names
+- Column headers are values, not variable names
 
-- ![](media/image2.wmf)A single observational unit is stored in multiple
+- A single observational unit is stored in multiple
   tables
 
-- ![](media/image2.wmf)Multiple values are stored in one column
+- Multiple values are stored in one column
 
 That's right! Multiple variables stored in one column is messy, but
 there should be multiple values in each column.
@@ -4182,16 +4162,16 @@ Which symptom of messy data is exhibited by bmi?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)Column headers are values, not variable names
+- Column headers are values, not variable names
 
-- ![](media/image2.wmf)Multiple values are stored in one column
+- Multiple values are stored in one column
 
-- ![](media/image2.wmf)Variables are stored in both rows and columns
+- Variables are stored in both rows and columns
 
-- ![](media/image2.wmf)Multiple types of observational units are stored
+- Multiple types of observational units are stored
   in the same table
 
-- ![](media/image2.wmf)A single observational unit is stored in multiple
+- A single observational unit is stored in multiple
   tables
 
 That's right! All of the year column names could be expressed as values
@@ -4431,15 +4411,15 @@ Which of the following is NOT a function in the tidyr package?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)gather()
+- gather()
 
-- ![](media/image2.wmf)separate()
+- separate()
 
-- ![](media/image2.wmf)spread()
+- spread()
 
-- ![](media/image2.wmf)filter()
+- filter()
 
-- ![](media/image2.wmf)unite()
+- unite()
 
 That's right! filter() is a function in the dplyr package.
 
@@ -6204,13 +6184,13 @@ Which of the following is not a missing or special value in R?
 
 **Possible Answers**
 
-- ![](media/image2.wmf)NA
+- NA
 
-- ![](media/image2.wmf)NaN
+- NaN
 
-- ![](media/image2.wmf)\#N/A
+- \#N/A
 
-- ![](media/image2.wmf)Inf
+- Inf
 
 Good job! \#N/A does not represent a missing or special value in an R
 dataset.
@@ -6440,15 +6420,15 @@ d. outlier()
 
 **Possible Answers**
 
-- ![](media/image2.wmf)a and b
+- a and b
 
-- ![](media/image5.wmf)a and c
+- a and c
 
-- ![](media/image2.wmf)b and c
+- b and c
 
-- ![](media/image2.wmf)b and d
+- b and d
 
-- ![](media/image2.wmf)a and d
+- a and d
 
 Good job! These two functions are very useful in getting information
 about the distribution of values for a given variable!
